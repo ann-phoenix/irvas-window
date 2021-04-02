@@ -1,14 +1,11 @@
+import checkNumInputs from './checkNumInputs';
+
 const forms = () => {
 	const form = document.querySelectorAll('form'),
-		    input = document.querySelectorAll('input'),
-				phoneInput = document.querySelectorAll('input[name="user_phone"]');
+		    input = document.querySelectorAll('input');
 
-	phoneInput.forEach(item => {
-		item.addEventListener('input', () => {
-			item.value = item.value.replace(/\D/, '');
-		});
-	}); // запрещаем не цифры в инпуте для телефона
-
+	checkNumInputs('input[name="user_phone"]');
+	// запись только цифр
 
 	const message = {
 		loading: 'Загрузка...',
