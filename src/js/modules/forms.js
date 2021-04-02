@@ -1,6 +1,6 @@
 import checkNumInputs from './checkNumInputs';
 
-const forms = () => {
+const forms = (state) => {
 	const form = document.querySelectorAll('form'),
 		    input = document.querySelectorAll('input');
 
@@ -38,8 +38,12 @@ const forms = () => {
 			item.appendChild(statusMessage);
 			// создали блок с сообщением о статусе
 
-			const formData = new FormData(item);
-			// сбор данных из формы
+			const formData = new FormData(item); // сбор данных из формы
+			if (item.getAttribute('data-calc') === 'end') {
+				for (let key in state) {
+					formData.append(key, state[key]);
+				}
+			}	// проверка последнего модального окна и отправка данных в formData
 
 			postData('assets/server.php', formData)
 				.then(res => {
