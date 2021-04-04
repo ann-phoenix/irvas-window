@@ -4,6 +4,7 @@ import tabs from './modules/tabs';
 import forms from './modules/forms';
 import changeModalState from './modules/changeModalState';
 import timer from './modules/timer';
+import images from './modules/images';
 
 window.addEventListener('DOMContentLoaded', () => {
 	'use strict';
@@ -22,4 +23,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	'inline-block');
 	forms(modalState);
 	timer('.container1', deadline);
+	images();
 });

@@ -1,1 +1,7 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+.vs
+.jshintrc
+
 node_modules
