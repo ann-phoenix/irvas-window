@@ -1,4 +1,3 @@
-
 const timer = (id, deadline) => {
 
 	const addZero = (num) => {

@@ -1,9 +1,9 @@
 import './slider';
 import modals from './modules/modals';
+import timer from './modules/timer';
 import tabs from './modules/tabs';
 import forms from './modules/forms';
 import changeModalState from './modules/changeModalState';
-import timer from './modules/timer';
 import images from './modules/images';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	let modalState = {}; 
 	// состояние модального окна, где пользователь что-то выбирает
-	
+
 	let deadline = '2021-12-18';
 
 	changeModalState(modalState);
